@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AURA uygulaması destek ve iletişim sayfası." />
+  <meta name="theme-color" content="#0c071e" />
+  <title>Destek & İletişim — AURA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-deep: #03010c; --bg-card: #14082c; --gold: #dfc07a;
+      --gold-light: #f0d998; --purple-light: #c4a0ff;
+      --text: #e8e0f0; --text-muted: #b8a8cc; --text-dim: #7a6a94;
+      --border-gold: rgba(223, 192, 122, 0.35);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif; background: var(--bg-deep); color: var(--text);
+      line-height: 1.75; font-size: 0.95rem;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 70% 40% at 50% 0%, rgba(124,58,237,0.12), transparent);
+    }
+    .wrap { position: relative; max-width: 780px; margin: 0 auto; padding: 0 24px 64px; }
+    nav { padding: 20px 0; border-bottom: 1px solid var(--border-gold); margin-bottom: 48px; }
+    nav a {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;
+      letter-spacing: 0.3em; color: var(--gold); text-decoration: none;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif; font-size: 2.4rem;
+      color: var(--gold); letter-spacing: 0.06em; margin-bottom: 8px;
+    }
+    .subtitle { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 40px; }
+    h2 {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.35rem;
+      color: var(--gold-light); margin: 36px 0 14px;
+    }
+    p, li { color: var(--text-muted); margin-bottom: 14px; }
+    ul { padding-left: 24px; margin-bottom: 20px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin: 32px 0; }
+    .card {
+      background: var(--bg-card); border: 1px solid var(--border-gold);
+      border-radius: 16px; padding: 28px 24px;
+    }
+    .card-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--gold); font-size: 1.2rem; margin-bottom: 10px;
+    }
+    .card p { font-size: 0.88rem; margin-bottom: 0; }
+    .card a {
+      display: inline-block; margin-top: 14px;
+      color: var(--purple-light); font-size: 0.9rem;
+    }
+    .info-table {
+      width: 100%; border-collapse: collapse; margin: 20px 0;
+    }
+    .info-table td {
+      padding: 12px 16px; border-bottom: 1px solid rgba(223,192,122,0.15);
+      color: var(--text-muted); font-size: 0.9rem;
+    }
+    .info-table td:first-child {
+      color: var(--gold); font-weight: 500; width: 40%;
+    }
+    a { color: var(--purple-light); }
+    footer {
+      margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border-gold);
+      text-align: center; color: var(--text-dim); font-size: 0.82rem;
+    }
+    footer a { color: var(--gold); text-decoration: none; margin: 0 10px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav><a href="index.html">AURA</a></nav>
+
+    <h1>Destek & İletişim</h1>
+    <p class="subtitle">Sorularınız, geri bildirimleriniz ve teknik destek talepleriniz için buradayız.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">✉️</div>
+        <h3>E-posta Desteği</h3>
+        <p>Genel sorular, hata bildirimleri ve geri bildirimler için bize yazın. En geç 48 saat içinde yanıt vermeye çalışıyoruz.</p>
+        <a href="mailto:destek@byaltun.com">destek@byaltun.com</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🗑️</div>
+        <h3>Veri Silme</h3>
+        <p>Kişisel verilerinizin silinmesini talep etmek için veri silme sayfamızı kullanın.</p>
+        <a href="veri-silme.html">Veri Silme Talebi →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h3>Gizlilik</h3>
+        <p>Verilerinizin nasıl işlendiğini öğrenmek için gizlilik politikamızı inceleyin.</p>
+        <a href="gizlilik-politikasi.html">Gizlilik Politikası →</a>
+      </div>
+    </div>
+
+    <h2>Uygulama Bilgileri</h2>
+    <table class="info-table">
+      <tr><td>Uygulama Adı</td><td>AURA — Kozmik Fal & Astroloji</td></tr>
+      <tr><td>Paket Adı</td><td>com.altun.aura</td></tr>
+      <tr><td>Güncel Sürüm</td><td>1.2.2 (versionCode 6)</td></tr>
+      <tr><td>Platform</td><td>Android</td></tr>
+      <tr><td>Dil</td><td>Türkçe</td></tr>
+      <tr><td>Geliştirici</td><td>ByAltun</td></tr>
+      <tr><td>Kategori</td><td>Yaşam Tarzı / Astroloji & Fal</td></tr>
+      <tr><td>Fiyat</td><td>Ücretsiz (reklam destekli)</td></tr>
+    </table>
+
+    <h2>Sık Sorulan Sorular</h2>
+
+    <h2 style="font-size: 1.1rem; margin-top: 28px;">Uygulama ücretli mi?</h2>
+    <p>Hayır, AURA tamamen ücretsizdir. Reklam gösterimi ve sanal altın sikke sistemi vardır; gerçek para ile satın alma yoktur.</p>
+
+    <h2 style="font-size: 1.1rem;">Fal yorumları gerçek mi?</h2>
+    <p>Yorumlar yapay zeka tarafından üretilir ve yalnızca eğlence amaçlıdır. Tıbbi, hukuki veya finansal tavsiye niteliği taşımaz.</p>
+
+    <h2 style="font-size: 1.1rem;">Hesap oluşturmam gerekiyor mu?</h2>
+    <p>Ayrı bir e-posta/şifre hesabı yoktur. Ad ve doğum bilgisi ile profil oluşturursunuz; bu profil sunucularımızla senkronize edilir.</p>
+
+    <h2 style="font-size: 1.1rem;">Verilerimi nasıl silerim?</h2>
+    <p><a href="veri-silme.html">Veri Silme Talebi</a> sayfasından e-posta ile talep gönderebilirsiniz.</p>
+
+    <h2 style="font-size: 1.1rem;">Hata bildirmek istiyorum</h2>
+    <p>
+      Ekran görüntüsü, cihaz modeli ve Android sürümünüzle birlikte
+      <a href="mailto:destek@byaltun.com">destek@byaltun.com</a> adresine yazın.
+    </p>
+
+    <h2>Google Play Console Bağlantıları</h2>
+    <p>Play Console'da kullanmanız gereken URL'ler (GitHub Pages yayınından sonra):</p>
+    <ul>
+      <li><strong>Gizlilik politikası:</strong> …/gizlilik-politikasi.html</li>
+      <li><strong>Web sitesi:</strong> …/index.html</li>
+      <li><strong>Veri silme URL'si:</strong> …/veri-silme.html</li>
+      <li><strong>Destek e-postası:</strong> destek@byaltun.com</li>
+    </ul>
+
+    <footer>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+      <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
+      <a href="veri-silme.html">Veri Silme</a>
+      <p style="margin-top: 16px;">© 2026 AURA / ByAltun</p>
+    </footer>
+  </div>
+</body>
+</html>
